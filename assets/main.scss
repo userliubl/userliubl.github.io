@@ -1,0 +1,122 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --bg-soft: #f6f8fc;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --brand: #2563eb;
+  --brand-soft: #dbeafe;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-soft: #0f172a;
+    --card-bg: #111827;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --brand: #60a5fa;
+    --brand-soft: #1e293b;
+    --border: #1f2937;
+    --shadow: none;
+  }
+}
+
+body {
+  background: var(--bg-soft);
+  color: var(--text-main);
+}
+
+.page-content .wrapper {
+  max-width: 960px;
+}
+
+.hero {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, var(--brand-soft), var(--card-bg));
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+
+.quick-links a {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.post-card p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.archive-list li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.archive-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-right: 0.55rem;
+}

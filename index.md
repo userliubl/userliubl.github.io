@@ -3,24 +3,29 @@ layout: page
 title: 首页
 ---
 
-欢迎来到我的博客，这里记录学习、项目和生活。
+<section class="hero">
+  <h2>你好，我是 userliubl</h2>
+  <p>这里记录学习、项目和生活，专注于把复杂问题讲清楚。</p>
+</section>
 
-## 快速导航
-
-- [全部文章](/archive/)
-- [关于我](/about/)
-- [GitHub 主页](https://github.com/userliubl)
+<nav class="quick-links">
+  <a href="/archive/">全部文章</a>
+  <a href="/about/">关于我</a>
+  <a href="https://github.com/userliubl">GitHub 主页</a>
+</nav>
 
 ## 最新文章
 
 {% if site.posts.size > 0 %}
-{% for post in site.posts limit: 6 %}
-### [{{ post.title }}]({{ post.url | relative_url }})
-
-{{ post.excerpt | strip_html | truncate: 120 }}
-
-`{{ post.date | date: "%Y-%m-%d" }}`
-{% endfor %}
+<div class="post-grid">
+  {% for post in site.posts limit: 6 %}
+  <article class="post-card">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+  </article>
+  {% endfor %}
+</div>
 {% else %}
 还没有发布文章，先去 `_posts` 新建一篇吧。
 {% endif %}
