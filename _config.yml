@@ -1,8 +1,20 @@
 title: 我的博客
 description: 记录学习与生活
-theme: minima
+remote_theme: cotes2020/jekyll-theme-chirpy
 lang: zh-CN
 author: userliubl
-header_pages:
-  - about.md
-  - archive.md
+timezone: Asia/Shanghai
+
+github:
+  username: userliubl
+
+social:
+  name: userliubl
+  links:
+    - https://github.com/userliubl
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
