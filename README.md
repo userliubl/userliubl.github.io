@@ -1,39 +1,35 @@
-# Chirpy Starter
+# userliubl.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+这是 `userliubl` 的个人博客仓库，站点地址是 <https://userliubl.github.io>。
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+博客基于 [Jekyll](https://jekyllrb.com/) 和 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/) 主题搭建，用来记录学习笔记、项目实践、工具使用经验和阶段性思考。
 
-## Why This Starter Exists
+## 内容方向
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+- 编程学习笔记
+- 项目实践复盘
+- Git、GitHub Pages、Jekyll 等工具使用记录
+- 日常开发和 AI 辅助开发经验
 
-To unlock all features, the following files must be present in your Jekyll site:
+## 本地预览
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+安装 Ruby 和 Bundler 后，可以在仓库根目录执行：
+
+```bash
+bundle install
+bundle exec jekyll serve
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+然后访问 <http://127.0.0.1:4000> 查看本地站点。
 
-## Usage
+## 写作
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+文章放在 `_posts` 目录，文件名遵循 `YYYY-MM-DD-title.md` 格式。每篇文章使用 Front Matter 设置标题、日期、分类和标签。
 
-## Contributing
+## 部署
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+提交到 `main` 分支后，GitHub Pages 会根据仓库配置自动构建和发布站点。
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+本仓库基于 MIT License 发布。
