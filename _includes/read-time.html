@@ -1,1 +1,7 @@
-
+{% assign words = include.content | number_of_words %}
+{% if words < 360 %}
+  {{ site.data.locales[site.lang].post.less_than_minute_read }}
+{% else %}
+  {% assign minutes = words | divided_by: 180 %}
+  {{ minutes }} {{ site.data.locales[site.lang].post.minute_read }}
+{% endif %}
